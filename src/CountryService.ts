@@ -47,7 +47,7 @@ export const getImageFlag = (countryCode: CountryCode) => {
   if (!countries) {
     throw new Error('Unable to find image because imageCountries is undefined')
   }
-  return countries[countryCode].flag
+  return countries[countryCode || 'US'].flag
 }
 
 export const getCountryName = (
